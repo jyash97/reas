@@ -3,6 +3,7 @@ import Markdown from "react-styleguidist/lib/rsg-components/Markdown";
 // import Preview from "react-styleguidist/lib/rsg-components/Preview";
 import { styled, Block } from "reas";
 import Editor from "./Editor";
+import Preview from "./Preview";
 
 const Wrapper = styled(Block)``;
 
@@ -19,7 +20,12 @@ const getSection = ({ location, allSections }) => {
 
 const sectionMap = {
   markdown: ({ content }) => <Markdown text={content} />,
-  code: ({ content, evalInContext }) => <Editor code={content} />
+  code: ({ content, evalInContext }) => (
+    <div>
+      <Preview code={content} evalInContext={evalInContext} />
+      <Editor code={content} />
+    </div>
+  )
 };
 
 const Section = props => {
