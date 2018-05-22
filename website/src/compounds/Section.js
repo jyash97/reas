@@ -5,7 +5,26 @@ import { styled, Block } from "reas";
 import Editor from "./Editor";
 import Preview from "./Preview";
 
-const Wrapper = styled(Block)``;
+const Wrapper = styled(Block)`
+  padding: 3em;
+  padding-top: 1.5em;
+  width: 100%;
+
+  [class*="rsg--pre"] {
+    width: 100%;
+
+    code {
+      font-size: 14px;
+      @media screen and (max-width: 640px) {
+        font-size: 13px;
+      }
+    }
+
+    &:not([class*="preview"]) {
+      overflow: auto;
+    }
+  }
+`;
 
 const getSection = ({ location, allSections }) => {
   const slugs = location.pathname.split("/").filter(Boolean);
@@ -37,8 +56,8 @@ const Section = props => {
     return (
       <Wrapper {...props}>
         {sectionContent.map(
-          ({ type, ...content }) =>
-            sectionMap[type] ? sectionMap[type](content) : null
+          ({ type, ...others }) =>
+            sectionMap[type] ? sectionMap[type](others) : null
         )}
       </Wrapper>
     );
