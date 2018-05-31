@@ -17,7 +17,12 @@ const StyledCodeMirror = styled(CodeMirror)`
     padding: 1em;
     height: auto;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
+
+    .CodeMirror-scroll {
+      margin-bottom: -35px;
+      margin-right: -35px;
+    }
 
     .CodeMirror-lines {
       font-size: 14px;
