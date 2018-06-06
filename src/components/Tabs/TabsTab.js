@@ -59,9 +59,18 @@ class Component extends React.Component {
         tabIndex={active ? 0 : -1}
         visible
         {...this.props}
-        onClick={flow(this.show, onClick)}
-        onFocus={flow(this.show, onFocus)}
-        onKeyDown={flow(this.keyDown, onKeyDown)}
+        onClick={flow(
+          this.show,
+          onClick
+        )}
+        onFocus={flow(
+          this.show,
+          onFocus
+        )}
+        onKeyDown={flow(
+          this.keyDown,
+          onKeyDown
+        )}
         className={finalClassName}
         elementRef={createElementRef(this, "element")}
       />

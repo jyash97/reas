@@ -7,7 +7,13 @@ import Base from "../Base";
 const toggle = props => () => props.toggle(props.step);
 
 const StepToggle = ({ onClick, ...props }) => (
-  <Base onClick={flow(toggle(props), onClick)} {...props} />
+  <Base
+    onClick={flow(
+      toggle(props),
+      onClick
+    )}
+    {...props}
+  />
 );
 
 StepToggle.propTypes = {

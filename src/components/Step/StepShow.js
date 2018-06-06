@@ -7,7 +7,13 @@ import Base from "../Base";
 const show = props => () => props.show(props.step);
 
 const StepShow = ({ onClick, ...props }) => (
-  <Base onClick={flow(show(props), onClick)} {...props} />
+  <Base
+    onClick={flow(
+      show(props),
+      onClick
+    )}
+    {...props}
+  />
 );
 
 StepShow.propTypes = {

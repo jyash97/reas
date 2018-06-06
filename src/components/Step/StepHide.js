@@ -5,7 +5,13 @@ import as from "../../enhancers/as";
 import Base from "../Base";
 
 const StepHide = ({ onClick, ...props }) => (
-  <Base onClick={flow(props.hide, onClick)} {...props} />
+  <Base
+    onClick={flow(
+      props.hide,
+      onClick
+    )}
+    {...props}
+  />
 );
 
 StepHide.propTypes = {

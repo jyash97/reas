@@ -5,7 +5,13 @@ import as from "../../enhancers/as";
 import Base from "../Base";
 
 const HiddenToggle = ({ onClick, ...props }) => (
-  <Base onClick={flow(onClick, props.toggle)} {...props} />
+  <Base
+    onClick={flow(
+      onClick,
+      props.toggle
+    )}
+    {...props}
+  />
 );
 
 HiddenToggle.propTypes = {

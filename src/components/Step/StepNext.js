@@ -6,7 +6,10 @@ import Base from "../Base";
 
 const StepNext = ({ onClick, ...props }) => (
   <Base
-    onClick={flow(props.next, onClick)}
+    onClick={flow(
+      props.next,
+      onClick
+    )}
     disabled={!props.loop && !props.hasNext()}
     {...props}
   />

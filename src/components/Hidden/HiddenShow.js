@@ -5,7 +5,13 @@ import as from "../../enhancers/as";
 import Base from "../Base";
 
 const HiddenShow = ({ onClick, ...props }) => (
-  <Base onClick={flow(onClick, props.show)} {...props} />
+  <Base
+    onClick={flow(
+      onClick,
+      props.show
+    )}
+    {...props}
+  />
 );
 
 HiddenShow.propTypes = {

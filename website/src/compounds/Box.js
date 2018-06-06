@@ -116,7 +116,7 @@ const Front = styled(Large)`
 
 const contentZ = withProp(
   [length, "count", "i"],
-  (l, count, i) => (i + 1) * l / (count + 1)
+  (l, count, i) => ((i + 1) * l) / (count + 1)
 );
 
 const contentAnimateZ = withProp([length, "i"], (l, i) => l + 100 * i + 20);
