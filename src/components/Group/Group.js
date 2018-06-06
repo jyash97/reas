@@ -5,14 +5,14 @@ import as from "../../enhancers/as";
 import Base from "../Base";
 import GroupItem from "./GroupItem";
 
-const responsive = (pass, fail) =>
+const verticalAt = (pass, fail) =>
   ifProp(
-    "responsive",
+    "verticalAt",
     css`
-      @media (min-width: ${withProp("responsive", x => x + 1)}px) {
+      @media (min-width: ${withProp("verticalAt", x => x + 1)}px) {
         ${fail};
       }
-      @media (max-width: ${prop("responsive")}px) {
+      @media (max-width: ${prop("verticalAt")}px) {
         ${pass};
       }
     `,
@@ -22,7 +22,7 @@ const responsive = (pass, fail) =>
 const Group = styled(Base)`
   display: flex;
   flex-direction: ${ifProp("vertical", "column", "row")};
-  ${responsive("flex-direction: column;")}
+  ${verticalAt("flex-direction: column")};
   > *,
   > * ${GroupItem} {
     min-height: 2.5em;
@@ -31,7 +31,7 @@ const Group = styled(Base)`
   > *:not(:first-child):not(:last-child),
   > *:not(:first-child):not(:last-child) ${GroupItem} {
     border-radius: 0;
-    ${responsive(
+    ${verticalAt(
       css`
         border-top-width: 0;
       `,
@@ -43,7 +43,7 @@ const Group = styled(Base)`
   > *:first-child,
   > *:first-child ${GroupItem} {
     border-bottom-right-radius: 0;
-    ${responsive(
+    ${verticalAt(
       css`
         border-bottom-left-radius: 0;
       `,
@@ -53,7 +53,7 @@ const Group = styled(Base)`
   > *:last-child,
   > *:last-child ${GroupItem} {
     border-top-left-radius: 0;
-    ${responsive(
+    ${verticalAt(
       css`
         border-top-width: 0;
         border-top-right-radius: 0;
@@ -68,7 +68,7 @@ const Group = styled(Base)`
 
 Group.propTypes = {
   vertical: PropTypes.bool,
-  responsive: PropTypes.number
+  verticalAt: PropTypes.number
 };
 
 Group.defaultProps = {
