@@ -3,6 +3,7 @@ import { styled, Flex } from "reas";
 import HomeBanner from "../compounds/HomeBanner";
 import HomeExample from "../compounds/HomeExample";
 import Credits from "../compounds/Credits";
+import Topbar from "../compounds/Topbar";
 
 const Wrapper = styled(Flex)`
   flex-direction: column;
@@ -13,6 +14,7 @@ const Wrapper = styled(Flex)`
 
 const Home = () => (
   <Wrapper>
+    <Topbar />
     <HomeBanner />
     <HomeExample />
     <Credits />

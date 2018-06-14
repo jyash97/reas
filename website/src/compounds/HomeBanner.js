@@ -1,8 +1,8 @@
 import React from "react";
 import { styled, Flex } from "reas";
 import Heading from "../elements/Heading";
-import HomeBannerBox from "./HomeBannerBox";
 import HomeBannerButtons from "./HomeBannerButtons";
+import Logo from "../elements/Logo";
 
 const Wrapper = styled(Flex)`
   position: relative;
@@ -33,7 +33,7 @@ const Text = styled(Heading)`
 const HomeBanner = props => (
   <Wrapper {...props}>
     <Content>
-      <HomeBannerBox />
+      <Logo />
       <Text>Toolkit for building interactive UI&apos;s with React</Text>
       <HomeBannerButtons />
     </Content>

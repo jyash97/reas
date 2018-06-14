@@ -40,8 +40,10 @@ module.exports = {
   template: {
     head: {
       raw: '<base href="/">'
-    }
+    },
+    favicon: "/icon.png"
   },
+  assetsDir: "website",
   styleguideDir: "website/public",
   styleguideComponents: {
     StyleGuide: path.join(__dirname, "website/src")
