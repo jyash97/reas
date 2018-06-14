@@ -34,6 +34,9 @@ module.exports = {
     const name = path.basename(componentPath, ".js");
     return `import { ${name} } from 'reas'`;
   },
+  logger: {
+    warn: () => {}
+  },
   template: {
     head: {
       raw: '<base href="/">'
