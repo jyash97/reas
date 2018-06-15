@@ -1,9 +1,9 @@
 import React from "react";
 import { Image } from "reas";
-import icon from "../../../logo/icon.svg";
+import symbol from "../../../logo/symbol.svg";
 
 const LogoSymbol = props => (
-  <Image src={icon} alt="ReaKit" height={24} {...props} />
+  <Image src={symbol} alt="ReaKit" height={100} {...props} />
 );
 
 export default LogoSymbol;

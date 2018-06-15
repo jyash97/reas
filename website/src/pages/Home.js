@@ -1,6 +1,6 @@
 import React from "react";
 import { styled, Flex } from "reas";
-import HomeBanner from "../compounds/HomeBanner";
+import HomeHero from "../compounds/HomeHero";
 import HomeExample from "../compounds/HomeExample";
 import Credits from "../compounds/Credits";
 import Topbar from "../compounds/Topbar";
@@ -15,7 +15,7 @@ const Wrapper = styled(Flex)`
 const Home = () => (
   <Wrapper>
     <Topbar />
-    <HomeBanner />
+    <HomeHero />
     <HomeExample />
     <Credits />
   </Wrapper>
