@@ -1,4 +1,4 @@
-import { styled, Heading } from "reas";
+import { styled, Heading } from "reakit";
 
 export default styled(Heading)`
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva,

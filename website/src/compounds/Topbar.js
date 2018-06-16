@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Flex, List, Grid, Link } from "reas";
+import { styled, Flex, List, Grid, Link } from "reakit";
 import { prop } from "styled-tools";
 import { NavLink as RRLink } from "react-router-dom";
 import MenuIcon from "react-icons/lib/md/menu";
@@ -73,8 +73,8 @@ const GitHubLink = styled(Link)`
   justify-self: flex-end;
 `;
 
-const HorizontalNav = props => (
-  <Nav {...props}>
+const HorizontalNav = () => (
+  <Nav>
     <li>
       <NavLink to="/guide">Guide</NavLink>
     </li>

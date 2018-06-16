@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import LibraryBooksIcon from "react-icons/lib/md/library-books";
 import CodeIcon from "react-icons/lib/fa/code";
 import GitHubIcon from "react-icons/lib/go/mark-github";
-import { styled, Grid } from "reas";
-import PrimaryButton from "../elements/PrimaryButton";
-import SecondaryButton from "../elements/SecondaryButton";
+import { styled, Grid } from "reakit";
+import ButtonPrimary from "../elements/ButtonPrimary";
+import ButtonSecondary from "../elements/ButtonSecondary";
 
 const Wrapper = styled(Grid)`
   grid-auto-flow: column;
@@ -18,19 +18,19 @@ const Wrapper = styled(Grid)`
 
 const HomeButtons = props => (
   <Wrapper {...props}>
-    <PrimaryButton as={Link} to="/guide">
+    <ButtonPrimary as={Link} to="/guide">
       <LibraryBooksIcon />Get Started
-    </PrimaryButton>
-    <SecondaryButton as={Link} to="/components">
+    </ButtonPrimary>
+    <ButtonSecondary as={Link} to="/components">
       <CodeIcon />Components
-    </SecondaryButton>
-    <SecondaryButton
+    </ButtonSecondary>
+    <ButtonSecondary
       as="a"
-      href="https://github.com/diegohaz/reas"
+      href="https://github.com/reakit/reakit"
       target="_blank"
     >
       <GitHubIcon />GitHub
-    </SecondaryButton>
+    </ButtonSecondary>
   </Wrapper>
 );
 

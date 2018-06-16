@@ -1,4 +1,4 @@
-import { styled, Paragraph } from "reas";
+import { styled, Paragraph } from "reakit";
 
 export default styled(Paragraph)`
   font-family: Georgia, serif;

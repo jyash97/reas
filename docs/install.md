@@ -4,10 +4,10 @@ Use your favorite package manager
 
 Yarn
 ```sh
-yarn add reas
+yarn add reakit
 ```
 
 npm
 ```sh
-npm install --save reas
+npm install --save reakit
 ```

@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Flex, Grid } from "reas";
+import { styled, Flex, Grid } from "reakit";
 import Heading from "../elements/Heading";
 import LogoSymbol from "../elements/LogoSymbol";
 import ContentWrapper from "../elements/ContentWrapper";

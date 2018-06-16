@@ -1,4 +1,4 @@
-import { styled, Code } from "reas";
+import { styled, Code } from "reakit";
 
 export default styled(Code)`
   font-family: "Fira Code", monospace;

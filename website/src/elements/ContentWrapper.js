@@ -1,4 +1,4 @@
-import { styled, Flex } from "reas";
+import { styled, Flex } from "reakit";
 
 const ContentWrapper = styled(Flex)`
   align-items: center;

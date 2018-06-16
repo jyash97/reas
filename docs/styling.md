@@ -1,9 +1,9 @@
-`reas` components are styled using [styled-components](https://www.styled-components.com).
+ReaKit components are styled using [styled-components](https://www.styled-components.com).
 
 This is an example of how a component is defined in the library:
 ```jsx static
 import styled from 'styled-components'
-import as, { Base } from 'reas'
+import as, { Base } from 'reakit'
 
 const Box = styled(Base)`
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -17,7 +17,7 @@ export default as('div')(Box)
 
 Then, you can easily extend `Box` and apply new styles:
 ```jsx static
-import { styled, Box } from 'reas'
+import { styled, Box } from 'reakit'
 
 const MyBox = styled(Box)`
   background-color: palevioletred;

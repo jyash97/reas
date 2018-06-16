@@ -1,13 +1,13 @@
 {
-  "name": "reas",
+  "name": "reakit",
   "version": "0.10.2",
   "description": "A minimalist and highly composable UI toolkit built on top of React and styled-components",
   "license": "MIT",
-  "repository": "diegohaz/reas",
-  "main": "dist/cjs/reas.js",
-  "module": "dist/es/reas.js",
-  "jsnext:main": "dist/es/reas.js",
-  "unpkg": "dist/umd/reas.min.js",
+  "repository": "diegohaz/reakit",
+  "main": "dist/cjs/reakit.js",
+  "module": "dist/es/reakit.js",
+  "jsnext:main": "dist/es/reakit.js",
+  "unpkg": "dist/umd/reakit.min.js",
   "author": {
     "name": "Diego Haz",
     "email": "hazdiego@gmail.com",
@@ -47,7 +47,7 @@
     ]
   },
   "keywords": [
-    "reas"
+    "reakit"
   ],
   "dependencies": {
     "constate": "^0.6.0",

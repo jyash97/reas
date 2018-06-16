@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Flex } from "reas";
+import { styled, Flex } from "reakit";
 import HomeHero from "../compounds/HomeHero";
 import HomeExample from "../compounds/HomeExample";
 import Credits from "../compounds/Credits";

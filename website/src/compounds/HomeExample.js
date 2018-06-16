@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Flex, Grid } from "reas";
+import { styled, Flex, Grid } from "reakit";
 import Editor from "./Editor";
 import HomeExampleUI from "./HomeExampleUI";
 

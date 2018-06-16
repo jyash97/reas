@@ -3,7 +3,7 @@ Finally, we have behaviors, which are basically components that apply event hand
 Let's take the [`Hidden`](#hidden) example, but now using a behavior component to toggle its state:
 
 ```jsx { "showCode": true }
-const { Block, Button, Hidden } = require('reas');
+const { Block, Button, Hidden } = require('reakit');
 
 const Example = () => (
   <Hidden.Container>
@@ -21,7 +21,7 @@ const Example = () => (
 
 [`Step`](#step) is another example of a component which takes advantage from containers and behaviors:
 ```jsx { "showCode": true }
-const { Block, Group, Button, Step } = require('reas');
+const { Block, Group, Button, Step } = require('reakit');
 
 const Example = () => (
   <Step.Container initialState={{ current: 0 }}>

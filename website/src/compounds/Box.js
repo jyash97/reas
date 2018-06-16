@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { prop, withProp, ifProp } from "styled-tools";
 import clamp from "lodash/clamp";
-import { styled, Box as ReasBox, Block, Button, css, keyframes } from "reas";
+import { styled, Box as BaseBox, Block, Button, css, keyframes } from "reakit";
 import BoxCall from "./BoxCall";
 
 const width = prop("dimensions.0");
@@ -63,7 +63,7 @@ const Wrapper = styled(Block)`
   )};
 `;
 
-const Surface = styled(ReasBox)`
+const Surface = styled(BaseBox)`
   display: inline-flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-[create-react-app](https://github.com/facebookincubator/create-react-app) is one of the best React application development tools. We are going to use `reas` within it. Just coding, no more configuration.
+[create-react-app](https://github.com/facebookincubator/create-react-app) is one of the best React application development tools. We are going to use ReaKit within it. Just coding, no more configuration.
 
 ## Install and Initialization
 
@@ -8,34 +8,34 @@ We need to install `create-react-app` first, you may need install [yarn](https:/
 npm install -g create-react-app yarn
 ```
 
-Create a new project named `reas-demo`.
+Create a new project named `reakit-demo`.
 
 ```sh
-create-react-app reas-demo
+create-react-app reakit-demo
 ```
 
 The tool will create and initialize environment and dependencies automatically.
 
-Then we go inside `reas-demo` and start it.
+Then we go inside `reakit-demo` and start it.
 
 ```sh
-cd reas-demo
+cd reakit-demo
 yarn start
 ```
 
-## Import reas
+## Import ReaKit
 
-Now we install `reas` from yarn or npm.
+Now we install `reakit` from yarn or npm.
 
 ```sh
-yarn add reas
+yarn add reakit
 ```
 
-Modify `src/App.js`, import components from `reas`.
+Modify `src/App.js`, import components from `reakit`.
 
 ```jsx static
 import React from 'react';
-import { InlineBlock, Button, Popover } from 'reas';
+import { InlineBlock, Button, Popover } from 'reakit';
 
 const App = () => (
   <Popover.Container>

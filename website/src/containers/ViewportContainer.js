@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "reas";
+import { Container } from "reakit";
 
 const getDimensions = () => ({
   width: window.innerWidth,

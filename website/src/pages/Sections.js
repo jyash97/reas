@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { styled, Flex } from "reas";
+import { styled, Flex } from "reakit";
 import Menu from "../compounds/Menu";
 import Section from "../compounds/Section";
 

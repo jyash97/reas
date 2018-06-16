@@ -1,7 +1,7 @@
 import React from "react";
 import Markdown from "react-styleguidist/lib/rsg-components/Markdown";
 // import Preview from "react-styleguidist/lib/rsg-components/Preview";
-import { styled, Block, Heading, InlineFlex } from "reas";
+import { styled, Block, Heading, InlineFlex } from "reakit";
 import Editor from "./Editor";
 import Preview from "./Preview";
 

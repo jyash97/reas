@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { styled, Block, List, Link } from "reas";
+import { styled, Block, List, Link } from "reakit";
 
 const mergeChildSections = object => [...object.sections, ...object.components];
 

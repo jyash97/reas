@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Popover } from "reas";
+import { Button, Popover } from "reakit";
 
 const Example = () => (
   <Popover.Container>

@@ -1,10 +1,10 @@
-`as` is the base method of `reas`. Understanding how it works is all you need to start using the library.
+`as` is the base method of ReaKit. Understanding how it works is all you need to start using the library.
 
-The first usage of `as` is enhancing components. With that, you can take advantage of all `reas` features on any component.
+The first usage of `as` is enhancing components. With that, you can take advantage of all ReaKit features on any component.
 
 ```jsx static
 import React from 'react'
-import as from 'reas'
+import as from 'reakit'
 
 const MyComponent = ({ as: T, ...props }) => <T {...props} />
 
@@ -17,7 +17,7 @@ export default enhance(MyComponent)
 The second way is by calling `as` from an enhanced component. Thus, you can combine it with any other component. This is specially useful when you need to apply [behaviors](#behaviors) to your components.
 
 ```jsx static
-import { Hidden } from 'reas'
+import { Hidden } from 'reakit'
 import { Link } from 'react-router-dom'
 import MyComponent from './MyComponent'
 
@@ -31,7 +31,7 @@ const MyComponentToggleLinkDiv = MyComponent.as([Hidden.Toggle, Link, 'div'])
 Finally, you can use it as a prop on the enhanced component.
 
 ```jsx static
-import { Hidden } from 'reas'
+import { Hidden } from 'reakit'
 import { Link } from 'react-router-dom'
 import MyComponent from './MyComponent'
 

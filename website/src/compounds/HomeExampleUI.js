@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Block, Flex, Grid } from "reas";
+import { styled, Block, Flex, Grid } from "reakit";
 import Example from "./Example";
 
 const Wrapper = styled(Flex)`

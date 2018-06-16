@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ThemeProvider, Provider, styled, Block } from "reas";
+import { ThemeProvider, Provider, styled, Block } from "reakit";
 import "./globalStyles";
 import theme from "./theme";
 import Home from "./pages/Home";

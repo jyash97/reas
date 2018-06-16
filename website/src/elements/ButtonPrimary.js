@@ -1,4 +1,4 @@
-import { styled, Button } from "reas";
+import { styled, Button } from "reakit";
 
 const ButtonPrimary = styled(Button)`
   background-color: #43a047;

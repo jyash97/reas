@@ -13,7 +13,7 @@ const {
 } = require("webpack-blocks");
 
 module.exports = {
-  title: "reas - React as Anything",
+  title: "ReaKit",
   webpackConfig: createConfig([
     sourceMaps(),
     babel(),
@@ -23,7 +23,7 @@ module.exports = {
       ["*.gif", "*.jpg", "*.jpeg", "*.png", "*.svg", "*.webp"],
       [url({ limit: 10000 })]
     ),
-    resolve({ alias: { reas: path.join(__dirname, "src") } }),
+    resolve({ alias: { reakit: path.join(__dirname, "src") } }),
     env("development", [
       devServer({
         historyApiFallback: { index: "/" }
@@ -32,7 +32,7 @@ module.exports = {
   ]),
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, ".js");
-    return `import { ${name} } from 'reas'`;
+    return `import { ${name} } from 'reakit'`;
   },
   logger: {
     warn: () => {}

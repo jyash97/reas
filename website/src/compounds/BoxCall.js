@@ -1,6 +1,6 @@
 import React from "react";
 import { ifProp } from "styled-tools";
-import { styled, Hidden, Arrow, Perpendicular, keyframes } from "reas";
+import { styled, Hidden, Arrow, Perpendicular, keyframes } from "reakit";
 import BoxCallContainer from "../containers/BoxCallContainer";
 
 const animation = keyframes`
