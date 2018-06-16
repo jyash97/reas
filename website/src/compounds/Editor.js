@@ -27,6 +27,10 @@ const StyledCodeMirror = styled(CodeMirror)`
       font-size: 16px;
       line-height: 1.4;
 
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+
       .CodeMirror-line {
         white-space: pre-wrap;
       }

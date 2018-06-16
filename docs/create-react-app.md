@@ -54,4 +54,4 @@ const App = () => (
 export default App;
 ```
 
-Open the browser at http://localhost:3000/. It renders a button toggling "Popover" on the page.
+Open the browser at http://localhost:3000/. It renders a button toggling `Popover` on the page.
