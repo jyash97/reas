@@ -43,7 +43,7 @@ module.exports = {
     },
     favicon: "/icon.png"
   },
-  assetsDir: "website",
+  assetsDir: "website/public",
   styleguideDir: "website/public",
   styleguideComponents: {
     StyleGuide: path.join(__dirname, "website/src")

@@ -12,7 +12,6 @@ import ConfigContainer from "../containers/ConfigContainer";
 const StyledCodeMirror = styled(CodeMirror)`
   .CodeMirror {
     font-family: "Fira Code", monospace;
-    line-height: 120%;
     background-color: rgb(0, 0, 0, 0.05) !important;
     padding: 1em;
     height: auto;
@@ -25,8 +24,8 @@ const StyledCodeMirror = styled(CodeMirror)`
     }
 
     .CodeMirror-lines {
-      font-size: 14px;
-      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
 
       .CodeMirror-line {
         white-space: pre-wrap;

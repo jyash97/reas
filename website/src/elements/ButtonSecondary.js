@@ -1,5 +1,7 @@
 import { styled, Button } from "reas";
 
-export default styled(Button)`
+const ButtonSecondary = styled(Button)`
   background-color: transparent;
 `;
+
+export default ButtonSecondary;
