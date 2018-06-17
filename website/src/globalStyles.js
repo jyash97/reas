@@ -1,8 +1,8 @@
 import { injectGlobal } from "styled-components";
-import FiraCodeBold from "./FiraCode-Bold.woff";
-import FiraCodeLight from "./FiraCode-Light.woff";
-import FiraCodeMedium from "./FiraCode-Medium.woff";
-import FiraCodeRegular from "./FiraCode-Regular.woff";
+import FiraCodeBold from "./fonts/FiraCode-Bold.woff";
+import FiraCodeLight from "./fonts/FiraCode-Light.woff";
+import FiraCodeMedium from "./fonts/FiraCode-Medium.woff";
+import FiraCodeRegular from "./fonts/FiraCode-Regular.woff";
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`

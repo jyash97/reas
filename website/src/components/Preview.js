@@ -4,15 +4,16 @@ import PropTypes from "prop-types";
 import { transform } from "buble";
 import splitExampleCode from "react-styleguidist/lib/utils/splitExampleCode";
 import ConfigContainer from "../containers/ConfigContainer";
+import transformCode from "../utils/transformCode";
 
-const compileCode = (code, config) => transform(code, config).code;
+const compileCode = (code, config) =>
+  transform(transformCode(code), config).code;
 const wrapCodeInFragment = code => `<React.Fragment>${code}</React.Fragment>;`;
 
 class Preview extends React.Component {
   static propTypes = {
     code: PropTypes.string.isRequired,
-    config: PropTypes.object.isRequired,
-    evalInContext: PropTypes.func.isRequired
+    config: PropTypes.object.isRequired
   };
 
   componentDidMount() {
@@ -30,7 +31,11 @@ class Preview extends React.Component {
   }
 
   getExampleComponent(compiledCode) {
-    return this.props.evalInContext(compiledCode)();
+    try {
+      return this.props.config.evalInContext(compiledCode)();
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   mountNode = React.createRef();
@@ -65,7 +70,9 @@ class Preview extends React.Component {
         ? wrapCodeInFragment(code)
         : code;
       return compileCode(wrappedCode, this.props.config.compilerConfig);
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
     return false;
   }
 

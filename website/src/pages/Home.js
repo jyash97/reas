@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "reakit";
-import Hero from "../compounds/Hero";
-import HomeExample from "../compounds/HomeExample";
-import Credits from "../compounds/Credits";
+import Hero from "../components/Hero";
+import HomeExample from "../components/HomeExample";
+import Credits from "../components/Credits";
 import CoreLayout from "../layouts/CoreLayout";
 
 const StyledHero = styled(Hero)`

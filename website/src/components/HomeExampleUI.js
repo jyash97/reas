@@ -1,6 +1,5 @@
 import React from "react";
 import { styled, Block, Flex, Grid } from "reakit";
-import Example from "./Example";
 
 const Wrapper = styled(Flex)`
   width: 400px;
@@ -12,7 +11,7 @@ const Wrapper = styled(Flex)`
   overflow: hidden;
 `;
 
-const HomeExampleUI = props => (
+const HomeExampleUI = ({ children, ...props }) => (
   <Wrapper {...props}>
     <Grid
       columns="auto 1fr auto auto"
@@ -49,7 +48,7 @@ const HomeExampleUI = props => (
       justifyContent="center"
       height={150}
     >
-      <Example />
+      {children}
     </Grid>
   </Wrapper>
 );

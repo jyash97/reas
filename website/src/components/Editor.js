@@ -55,13 +55,12 @@ class Editor extends React.Component {
   };
 
   shouldComponentUpdate() {
-    return true;
+    return false;
   }
 
   handleChange = debounce((editor, metadata, newCode) => {
-    const { onChange } = this.props;
-    if (typeof onChange === "function") {
-      onChange(newCode);
+    if (this.props.onChange) {
+      this.props.onChange(newCode);
     }
   }, 10);
 

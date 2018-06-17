@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { styled, Flex } from "reakit";
 import { prop, ifProp } from "styled-tools";
-import Header from "../compounds/Header";
+import Header from "../components/Header";
 import ScrollContainer from "../containers/ScrollContainer";
 
 const Wrapper = styled(Flex)`

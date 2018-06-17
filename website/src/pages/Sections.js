@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { styled, Flex } from "reakit";
-import Menu from "../compounds/Menu";
-import Section from "../compounds/Section";
+import Menu from "../components/Menu";
+import Section from "../components/Section";
 
 const Wrapper = styled(Flex)``;
 
