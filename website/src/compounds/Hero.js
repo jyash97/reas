@@ -1,7 +1,6 @@
 import React from "react";
 import { styled, Grid, Inline } from "reakit";
 import { Link } from "react-router-dom";
-import Typing from "react-typing-animation";
 import LibraryBooksIcon from "react-icons/lib/md/library-books";
 import CodeIcon from "react-icons/lib/go/code";
 import GitHubIcon from "react-icons/lib/go/mark-github";
@@ -55,37 +54,11 @@ const Buttons = styled(Grid)`
   }
 `;
 
-const Word = styled(Inline)`
-  font-weight: 500;
-`;
-
-const words = [
-  "interactive",
-  "composable",
-  "accessible",
-  "styleable",
-  "responsive",
-  "minimalist"
-];
-
-const Text = () => (
-  <Typing speed={100}>
-    {words.map(word => (
-      <Word key={word}>
-        {word}
-        <Typing.Delay ms={2000} />
-        <Typing.Backspace speed={20} count={word.length - 1} />
-        <Typing.Backspace speed={100} count={1} />
-      </Word>
-    ))}
-  </Typing>
-);
-
 const Hero = props => (
   <Wrapper {...props}>
     <LogoSymbol height="100%" gridArea="logo" />
     <Headline gridArea="text">
-      Toolkit for building <Text /> UIs with React
+      Toolkit for building interactive UIs with React
     </Headline>
     <Buttons gridArea="buttons">
       <ButtonPrimary as={[ButtonRounded, Link]} to="/guide">
