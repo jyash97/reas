@@ -1,7 +1,8 @@
 import { styled, Button } from "reakit";
+import { prop } from "styled-tools";
 
 const ButtonPrimary = styled(Button)`
-  background-color: #43a047;
+  background-color: ${prop("theme.pinkDark")};
   border: none;
   color: white;
 `;

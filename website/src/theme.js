@@ -1,8 +1,7 @@
 export default {
-  pink: "#fd88ce",
-  pink2: "#fd6099",
-  pink3: "#fc4577",
-  green: "#59f780",
+  pinkLight: "#fd88ce",
+  pinkMedium: "#fd6099",
+  pinkDark: "#fc4577",
   black: "#282b36",
   gray: "#666"
 };

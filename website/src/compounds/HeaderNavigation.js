@@ -13,15 +13,15 @@ const Navigation = styled(Grid.as("nav"))`
 const Link = styled(NavLink)`
   display: flex;
   align-items: center;
-  padding-top: 3px;
+  padding-top: 6px;
   border-bottom: 3px solid transparent;
   color: ${prop("theme.black")};
   text-decoration: none;
   &:hover {
-    border-color: ${prop("theme.pink")};
+    border-color: ${prop("theme.pinkLight")};
   }
   &.active {
-    border-color: ${prop("theme.pink3")};
+    border-color: ${prop("theme.pinkDark")};
   }
 `;
 
