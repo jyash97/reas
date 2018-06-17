@@ -14,6 +14,7 @@ const {
 
 module.exports = {
   title: "ReaKit",
+  require: ["babel-polyfill"],
   webpackConfig: createConfig([
     sourceMaps(),
     babel(),

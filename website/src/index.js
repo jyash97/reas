@@ -11,7 +11,7 @@ const Wrapper = styled(Block)`
 `;
 
 const App = props => (
-  <Provider initialState={{ config: props.config }}>
+  <Provider initialState={{ config: props.config }} devtools>
     <ThemeProvider theme={theme}>
       <Wrapper>
         <Router>

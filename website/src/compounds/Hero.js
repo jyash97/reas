@@ -1,17 +1,15 @@
 import React from "react";
-import { styled, Grid, Inline } from "reakit";
+import { styled, Grid } from "reakit";
 import { Link } from "react-router-dom";
 import LibraryBooksIcon from "react-icons/lib/md/library-books";
 import CodeIcon from "react-icons/lib/go/code";
-import GitHubIcon from "react-icons/lib/go/mark-github";
 import ButtonPrimary from "../elements/ButtonPrimary";
 import ButtonSecondary from "../elements/ButtonSecondary";
 import Heading from "../elements/Heading";
 import LogoSymbol from "../elements/LogoSymbol";
 import ContentWrapper from "../elements/ContentWrapper";
 import ButtonRounded from "../elements/ButtonRounded";
-import Icon from "../elements/Icon";
-import ButtonGray from "../elements/ButtonGray";
+import HeroGitHubButton from "./HeroGitHubButton";
 
 const Wrapper = styled(ContentWrapper)`
   display: grid;
@@ -67,14 +65,7 @@ const Hero = props => (
       <ButtonSecondary as={[ButtonRounded, Link]} to="/components">
         <CodeIcon />Components
       </ButtonSecondary>
-      <ButtonGray
-        as={[ButtonRounded, "a"]}
-        href="https://github.com/reakit/reakit"
-        target="_blank"
-        paddingLeft={10}
-      >
-        <Icon as={GitHubIcon} />GitHub
-      </ButtonGray>
+      <HeroGitHubButton />
     </Buttons>
   </Wrapper>
 );
