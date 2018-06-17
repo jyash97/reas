@@ -4,14 +4,17 @@ import { styled, Block, Flex, Grid } from "reakit";
 const Wrapper = styled(Flex)`
   width: 400px;
   max-width: calc(100vw - 32px);
-  margin: 0 16px;
+  margin: 16px 16px 0;
   flex-direction: column;
   background-color: white;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
+  @media (max-width: 764px) {
+    margin: 16px 0 0;
+  }
 `;
 
-const HomeExampleUI = ({ children, ...props }) => (
+const HomeExamplePreview = ({ children, ...props }) => (
   <Wrapper {...props}>
     <Grid
       columns="auto 1fr auto auto"
@@ -53,4 +56,4 @@ const HomeExampleUI = ({ children, ...props }) => (
   </Wrapper>
 );
 
-export default HomeExampleUI;
+export default HomeExamplePreview;

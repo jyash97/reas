@@ -1,9 +1,10 @@
 import React from "react";
-import { styled, Flex, Grid } from "reakit";
+import { styled, Flex } from "reakit";
 import Editor from "./Editor";
-import HomeExampleUI from "./HomeExampleUI";
 import Preview from "./Preview";
 import StateContainer from "../containers/StateContainer";
+import ContentWrapper from "../elements/ContentWrapper";
+import HomeExamplePreview from "./HomeExamplePreview";
 
 const initialCode = `
 import React from "react";
@@ -24,17 +25,17 @@ import { Button, Popover } from "reakit";
 
 const Wrapper = styled(Flex)`
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #282a36;
 `;
 
-const Content = styled(Grid)`
-  max-width: 1200px;
-  grid-gap: 20px;
-  grid-auto-flow: column;
-  align-items: end;
+const Content = styled(ContentWrapper)`
+  width: auto;
+  max-width: 100%;
+  align-items: flex-end;
   @media (max-width: 768px) {
-    grid-auto-flow: row;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -44,9 +45,9 @@ const HomeExample = props => (
       {({ code, setState }) => (
         <Content>
           <Editor code={code.trim()} onChange={c => setState({ code: c })} />
-          <HomeExampleUI>
+          <HomeExamplePreview>
             <Preview code={code.trim()} />
-          </HomeExampleUI>
+          </HomeExamplePreview>
         </Content>
       )}
     </StateContainer>

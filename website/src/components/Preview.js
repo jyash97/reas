@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+import { Block } from "reakit";
 import { transform } from "buble";
 import splitExampleCode from "react-styleguidist/lib/utils/splitExampleCode";
 import ConfigContainer from "../containers/ConfigContainer";
@@ -16,8 +17,18 @@ class Preview extends React.Component {
     config: PropTypes.object.isRequired
   };
 
+  state = {
+    error: null
+  };
+
   componentDidMount() {
     this.executeCode();
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      this.state.error !== nextState.error || this.props.code !== nextProps.code
+    );
   }
 
   componentDidUpdate(prevProps) {
@@ -34,8 +45,9 @@ class Preview extends React.Component {
     try {
       return this.props.config.evalInContext(compiledCode)();
     } catch (e) {
-      console.log(e);
+      this.handleError(e);
     }
+    return null;
   }
 
   mountNode = React.createRef();
@@ -47,6 +59,8 @@ class Preview extends React.Component {
   }
 
   executeCode() {
+    this.setState({ error: null });
+
     const { code } = this.props;
     if (!code) return;
 
@@ -60,7 +74,9 @@ class Preview extends React.Component {
       this.unmountPreview();
       try {
         ReactDOM.render(exampleComponent, this.mountNode.current);
-      } catch (e) {}
+      } catch (e) {
+        this.handleError(e);
+      }
     });
   }
 
@@ -71,15 +87,28 @@ class Preview extends React.Component {
         : code;
       return compileCode(wrappedCode, this.props.config.compilerConfig);
     } catch (e) {
-      console.log(e);
+      this.handleError(e);
     }
     return false;
   }
 
+  handleError = e => {
+    this.unmountPreview();
+    this.setState({ error: e.toString() });
+    console.error(e); // eslint-disable-line no-console
+  };
+
   render() {
+    const { error } = this.state;
     return (
       <React.Fragment>
-        <div ref={this.mountNode} />
+        {error ? (
+          <Block as="pre" fontSize={14} color="red">
+            {error}
+          </Block>
+        ) : (
+          <div ref={this.mountNode} />
+        )}
       </React.Fragment>
     );
   }

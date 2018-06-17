@@ -16,7 +16,7 @@ const Wrapper = styled(Flex)`
   width: 100%;
   justify-content: center;
   background-color: white;
-  z-index: 999;
+  z-index: 99999;
 `;
 
 const Layout = styled(Grid)`

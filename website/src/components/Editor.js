@@ -10,18 +10,11 @@ import "codemirror/theme/dracula.css";
 import ConfigContainer from "../containers/ConfigContainer";
 
 const StyledCodeMirror = styled(CodeMirror)`
+  max-width: 100%;
   .CodeMirror {
     font-family: "Fira Code", monospace;
-    background-color: rgb(0, 0, 0, 0.05) !important;
     padding: 1em;
     height: auto;
-    max-width: 100%;
-    margin-bottom: 2em;
-
-    .CodeMirror-scroll {
-      margin-bottom: -35px;
-      margin-right: -35px;
-    }
 
     .CodeMirror-lines {
       font-size: 16px;
@@ -29,10 +22,6 @@ const StyledCodeMirror = styled(CodeMirror)`
 
       @media (max-width: 768px) {
         font-size: 14px;
-      }
-
-      .CodeMirror-line {
-        white-space: pre-wrap;
       }
     }
 
@@ -72,7 +61,11 @@ class Editor extends React.Component {
           <StyledCodeMirror
             value={code}
             onChange={this.handleChange}
-            options={{ ...editorConfig, theme: "dracula", readOnly }}
+            options={{
+              ...editorConfig,
+              theme: "dracula",
+              readOnly
+            }}
           />
         )}
       </ConfigContainer>
