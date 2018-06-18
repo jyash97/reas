@@ -8,9 +8,14 @@ import "codemirror/mode/jsx/jsx";
 import "codemirror/lib/codemirror.css";
 import "codemirror/theme/dracula.css";
 import ConfigContainer from "../containers/ConfigContainer";
+import ViewportContainer from "../containers/ViewportContainer";
+
+// find a font for the site
+// finish home (features and footer)
+// create sidebar
+// create mobile menu
 
 const StyledCodeMirror = styled(CodeMirror)`
-  max-width: 100%;
   .CodeMirror {
     font-family: "Fira Code", monospace;
     padding: 1em;
@@ -54,19 +59,24 @@ class Editor extends React.Component {
   }, 10);
 
   render() {
-    const { code, readOnly } = this.props;
+    const { code, readOnly, ...props } = this.props;
     return (
       <ConfigContainer>
         {({ editorConfig }) => (
-          <StyledCodeMirror
-            value={code}
-            onChange={this.handleChange}
-            options={{
-              ...editorConfig,
-              theme: "dracula",
-              readOnly
-            }}
-          />
+          <ViewportContainer>
+            {({ width }) => (
+              <StyledCodeMirror
+                value={code}
+                onChange={this.handleChange}
+                options={{
+                  ...editorConfig,
+                  theme: "dracula",
+                  readOnly: width <= 768 || readOnly ? "nocursor" : false
+                }}
+                {...props}
+              />
+            )}
+          </ViewportContainer>
         )}
       </ConfigContainer>
     );

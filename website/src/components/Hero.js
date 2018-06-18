@@ -18,12 +18,12 @@ const Wrapper = styled(ContentWrapper)`
     "buttons buttons" auto / 150px 1fr;
   grid-gap: 50px 30px;
   max-width: 768px;
-  padding: 100px;
+  padding: 0 100px;
   place-items: center;
   align-content: baseline;
 
   @media (max-width: 768px) {
-    padding: 40px 20px;
+    padding: 0 20px;
     grid-gap: 30px;
     grid-template:
       "logo" 100px

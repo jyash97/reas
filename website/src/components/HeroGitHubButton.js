@@ -12,7 +12,7 @@ const getPopoverPos = width => (width > 768 ? "right" : "bottom");
 const getArrowPos = width => (width > 768 ? "left" : "top");
 
 const Button = styled(ButtonGray)`
-  padding-left: 10px;
+  padding: 0 20px 0 10px;
   @media (max-width: 768px) {
     margin-bottom: 40px;
   }

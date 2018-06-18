@@ -39,12 +39,19 @@ const Content = styled(ContentWrapper)`
   }
 `;
 
+const StyledEditor = styled(Editor)`
+  margin: 1em 0;
+`;
+
 const HomeExample = props => (
   <Wrapper {...props}>
     <StateContainer initialState={{ code: initialCode }}>
       {({ code, setState }) => (
         <Content>
-          <Editor code={code.trim()} onChange={c => setState({ code: c })} />
+          <StyledEditor
+            code={code.trim()}
+            onChange={c => setState({ code: c })}
+          />
           <HomeExamplePreview>
             <Preview code={code.trim()} />
           </HomeExamplePreview>
